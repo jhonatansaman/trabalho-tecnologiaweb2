@@ -1,0 +1,20 @@
+<form name="form">
+    <label>Código</label><br/>
+    <input type="text" ng-model="aluno.id"  name="id"/><br/>
+    
+    <label>Nome</label><br/>
+    <input type="text" ng-model="aluno.nome" required minlength="3" name="nome"/><br/>
+    <p class="erro" ng-if="form.nome.$error.required && form.nome.$dirty">
+        O campo nome é obrigatório! 
+    </p>
+    <p class="erro" ng-if="form.nome.$error.minlength && form.nome.$dirty">
+        O campo nome deve possuir mais de 3 caracteres
+    </p>
+    <label>Idade</label><br/>
+    <input type="text" ng-model="aluno.idade" required name="idade" /><br/>
+    <p class="erro" ng-if="form.idade.$error.required && form.idade.$dirty">
+        O campo código é obrigatório! 
+    </p>
+    <button ng-click="salvar()" ng-disabled="form.$invalid || form.$pristine">Salvar</button>
+    <button ng-click="cancelar()" ng-disabled="form.$pristine">Cancelar</button>
+</form>

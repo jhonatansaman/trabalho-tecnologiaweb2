@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html ng-app="alunosApp">
+    <head>
+        <title>Cadastro de alunos</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+        <link rel="stylesheet" type="text/css" href="css/materialize.css">
+        <link rel="stylesheet" type="text/css" href="css/materialize.min.css"> 
+        <style>
+            .erro {
+                color:red;
+                margin: 0px;
+            }
+        </style>
+    </head>
+    <body ng-controller="CadastroAlunosController">
+        <div class="navbar-fixed">
+        <nav>
+         <div class="nav-wrapper">
+           <a href="#/logo" class="brand-logo right">Gerenciamento de Alunos</a>
+          <ul class="left hide-on-med-and-down">
+           <li><a href="#/lista">Lista de Alunos</a></li>
+           <li><a href="#/cadastro">Cadastro de Alunos</a></li>
+           <li><a href="#/Sobre">Sobre</a></li>
+          
+          </ul>
+         </div>
+        </nav>
+        </div>
+
+        <div ng-view></div>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+        <script src="js/materialize.min.js"></script>
+        <script src="js/angular.min.js"></script>
+        <script src="js/angular-route.min.js"></script>
+        <script src="js/alunos.js"></script>
+    </body>
+</html>

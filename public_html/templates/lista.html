@@ -1,0 +1,21 @@
+<table>
+    <legend>Nome de alunos</legend>
+    <tr>
+        <th>Id</th>
+        <th>Nome</th>
+        <th>Idade</th>
+        <th></th>
+    </tr>
+    <tr ng-repeat="aluno in alunos track by $index"
+        ng-dblclick="editar(aluno)">
+        <td>{{aluno.id}}</td>
+        <td>{{aluno.nome}}</td>
+        <td>{{aluno.idade}}</td>                
+        <td>
+            [
+            <a ng-href="#/cadastro/{{aluno.id}}"> Editar</a> | 
+            <a href="#" ng-click="excluir(aluno)">Excluir</a>
+            ]
+        </td>
+    </tr>
+</table>
